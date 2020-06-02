@@ -21,6 +21,10 @@ shinyUI(
                 hr(),
                 helpText("Death Rates in Virginia in 1940 by age group on the selected population group."),
                 hr(),
+                helpText("Choosing the population group you can see the death rate per 1000 population for every
+                         age group in Virginia in 1940. You can also see the total death population of
+                         the chosen group and the percentage."),
+                hr(),
                 helpText("Source code can be found at https://github.com/stavoikono/developing-data-products")
             ),
             
@@ -28,7 +32,9 @@ shinyUI(
             mainPanel(
                 plotOutput("deathPlot"),
                 h3('Total Death of the population group'),
-                verbatimTextOutput("prediction")
+                verbatimTextOutput("prediction"),
+                h3('Proportion of death per group'),
+                verbatimTextOutput("prop")
             )
             
         )
